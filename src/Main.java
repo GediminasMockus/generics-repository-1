@@ -22,15 +22,12 @@ public class Main {
 
     }
 
-    public static void printLists(ArrayList<String> stringList, ArrayList<Integer> integerList) {
-        System.out.println("String List:");
-        for (String str : stringList) {
-            System.out.println(str);
-        }
+    public static <T, V> void printLists(ArrayList<T> list1, ArrayList<V> list2) {
+        int maxSize = Math.min(list1.size(), list2.size());
 
-        System.out.println("\nInteger List:");
-        for (Integer num : integerList) {
-            System.out.println(num);
+        for (int i = 0; i < maxSize; i++) {
+            System.out.println("List 1: " + list1.get(i));
+            System.out.println("List 2: " + list2.get(i));
         }
     }
 }

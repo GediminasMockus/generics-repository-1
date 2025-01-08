@@ -18,16 +18,15 @@ public class Main {
         integerList.add(10);
 
 
-        printLists(stringList, integerList);
+        printLists(integerList);
+        printLists(stringList);
 
     }
 
-    public static <T, V> void printLists(ArrayList<T> list1, ArrayList<V> list2) {
-        int maxSize = Math.min(list1.size(), list2.size());
+    public static <T> void printLists(ArrayList<T> list) {
 
-        for (int i = 0; i < maxSize; i++) {
-            System.out.println("List 1: " + list1.get(i));
-            System.out.println("List 2: " + list2.get(i));
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
         }
     }
 }

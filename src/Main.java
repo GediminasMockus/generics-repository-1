@@ -25,8 +25,8 @@ public class Main {
 
     public static <T> void printLists(ArrayList<T> list) {
 
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
+        for (T item: list) {
+            System.out.println(item);
         }
     }
 }
